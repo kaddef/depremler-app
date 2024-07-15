@@ -1,0 +1,84 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: 70px;
+    margin-bottom: 8px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.magnitude {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.location {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.depth, .time {
+    display: flex;
+    align-items: center;
+    max-width: 100px;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+@media screen and (max-width: 425px) {
+    .location {
+        font-size: medium;
+        font-weight: 600;
+    }
+    .info-container {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .card {
+        flex-direction: column;
+        height: 100%;
+    }
+    .details-container {
+        align-items: center;
+    }
+    .info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
