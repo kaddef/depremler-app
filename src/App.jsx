@@ -4,6 +4,7 @@ import Loading from "./components/Loading/Loading.jsx";
 import "./App.css";
 import QuakeCard from "./components/QuakeCard/QuakeCard.jsx";
 import Info from "./components/Info/Info.jsx";
+import Error from "./components/Error/Error.jsx";
 
 function App() {
   const [location, setLocation] = useState(undefined);
@@ -17,7 +18,7 @@ function App() {
     return <Loading/>;
   }
   if(error) {
-    return <div>{error}</div>
+    return <Error>{error}</Error>
   }
 
   return (

@@ -95,27 +95,6 @@ function errorFunction(error, setAuthorized) {
 export function useFetch(url) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null)
-    useEffect(() => {
-        (async function () {
-            try {
-                const response = await axios.get(url)
-                setData(response.data)
-            } catch (error) {
-                console.log("HATA VAR")
-                console.log(error.request)
-                setError('Cant get data from KOERI')
-            } finally {
-                setLoading(false);
-            }
-        })()
-    }, [url]);
-    return [data, loading, error];
-}
-
-export function useFetch2(url) {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -127,7 +106,7 @@ export function useFetch2(url) {
                 if(error.code === "ERR_NETWORK") {
                     setError('Server Is Down');
                 } else if(error.response.status === 404) {
-                    setError('Cant get data from KOERI');
+                    setError("Can't get data from KOERI");
                 }
             })
             .finally(() => {
