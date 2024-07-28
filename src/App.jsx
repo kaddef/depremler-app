@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   const [location, setLocation] = useState(undefined);
   const [authorized, setAuthorized] = useState(false);
-  const [quakeDatas, loading, error] = useFetch("http://localhost:3000/today");
+  const [quakeDatas, loading, error] = useFetch("https://kandilli-api.onrender.com/today");
 
   useEffect(() => {
     getLocation(setLocation, setAuthorized);
