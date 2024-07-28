@@ -88,7 +88,7 @@ function successFunction(position, setLocation, setAuthorized) {
 }
 
 function errorFunction(error, setAuthorized) {
-    console.error('Error retrieving geolocation:', error.message);
+    //console.error('Error retrieving geolocation:', error.message);
     setAuthorized(false);
 }
 

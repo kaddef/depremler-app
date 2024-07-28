@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { getLocation, useFetch2 } from "./utils.js";
+import { getLocation, useFetch } from "./utils.js";
 import Loading from "./components/Loading/Loading.jsx";
-import "./App.css";
 import QuakeCard from "./components/QuakeCard/QuakeCard.jsx";
 import Info from "./components/Info/Info.jsx";
 import Error from "./components/Error/Error.jsx";
+import "./App.css";
 
 function App() {
   const [location, setLocation] = useState(undefined);
   const [authorized, setAuthorized] = useState(false);
-  const [quakeDatas, loading, error] = useFetch2("http://localhost:3000/today");
+  const [quakeDatas, loading, error] = useFetch("http://localhost:3000/today");
+
   useEffect(() => {
     getLocation(setLocation, setAuthorized);
   }, []);
@@ -17,6 +18,7 @@ function App() {
   if (loading) {
     return <Loading/>;
   }
+  
   if(error) {
     return <Error>{error}</Error>
   }
