@@ -1,6 +1,9 @@
-# Depremler-App
+# [Depremler-App](https://depremler-app.onrender.com)
 
 **Depremler-App** is a React application that allows users to visualize daily earthquake data. It provides detailed information about each earthquake, including its magnitude, depth, time, and location, and analyzes the data based on the user's location.
+
+## Caution
+The earthquake data on this site has been obtained from the [Kandilli Observatory and Earthquake Research Institute's Regional Earthquake-Tsunami Monitoring and Assessment Center of Boğaziçi University.](http://www.koeri.boun.edu.tr/scripts/lst8.asp) For more detailed information, you can visit the website.
 
 ## Features
 
